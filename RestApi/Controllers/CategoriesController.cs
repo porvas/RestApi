@@ -9,11 +9,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using System.Web.Http.Cors;
 using System.Collections.ObjectModel;
 using RestApi.API.Models;
+using RestApi.Infrastructure;
+using System.Web.Http.Cors;
+using Microsoft.Owin.Host.SystemWeb;
 
-namespace DBService.Controllers
+namespace RestApi.Controllers
 {
     public class SubcatItem
     {

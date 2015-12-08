@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using RestApi.API.Models;
+using RestApi.Infrastructure;
 
-namespace DBService.Controllers
+namespace RestApi.Controllers
 {
     public class ImagesController : ApiController
     {

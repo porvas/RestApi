@@ -6,7 +6,7 @@ namespace RestApi.Migrations.DataMigrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<RestApi.API.Models.DBServiceContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<RestApi.Infrastructure.DBServiceContext>
     {
         public Configuration()
         {
@@ -14,7 +14,7 @@ namespace RestApi.Migrations.DataMigrations
             MigrationsDirectory = @"Migrations\DataMigrations";
         }
 
-        protected override void Seed(RestApi.API.Models.DBServiceContext context)
+        protected override void Seed(RestApi.Infrastructure.DBServiceContext context)
         {
             context.Categories.AddOrUpdate(
                 p => p.Id,

@@ -5,7 +5,7 @@ namespace RestApi.Migrations.UsersMigrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<RestApi.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<RestApi.Infrastructure.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace RestApi.Migrations.UsersMigrations
             MigrationsDirectory = @"Migrations\UsersMigrations";
         }
 
-        protected override void Seed(RestApi.Models.ApplicationDbContext context)
+        protected override void Seed(RestApi.Infrastructure.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -11,8 +11,9 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using RestApi.API.Models;
 using System.Web.Http.Cors;
+using RestApi.Infrastructure;
 
-namespace DBService.Controllers
+namespace RestApi.Controllers
 {
     [EnableCors(origins: "http://localhost", headers: "*", methods: "*")]
     public class SubcategoriesController : ApiController
