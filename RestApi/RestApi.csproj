@@ -52,6 +52,10 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Cors, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Owin.Security.Jwt">
       <HintPath>..\packages\Microsoft.Owin.Security.Jwt.3.0.1\lib\net45\Microsoft.Owin.Security.Jwt.dll</HintPath>
     </Reference>
@@ -79,6 +83,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
@@ -95,8 +103,27 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Runtime.Serialization" />
@@ -191,6 +218,10 @@
     <Compile Include="Migrations\DataMigrations\201512072109480_InitialDatabaseCreation.Designer.cs">
       <DependentUpon>201512072109480_InitialDatabaseCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\DataMigrations\201512111558082_update.cs" />
+    <Compile Include="Migrations\DataMigrations\201512111558082_update.Designer.cs">
+      <DependentUpon>201512111558082_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DataMigrations\Configuration.cs" />
     <Compile Include="Migrations\UsersMigrationsSample\201512080657029_InitialDatabaseCreation.cs" />
     <Compile Include="Migrations\UsersMigrationsSample\201512080657029_InitialDatabaseCreation.Designer.cs">
@@ -208,6 +239,10 @@
     <Compile Include="Migrations\UsersMigrations\201512072110348_InitialDatabaseCreation.cs" />
     <Compile Include="Migrations\UsersMigrations\201512072110348_InitialDatabaseCreation.Designer.cs">
       <DependentUpon>201512072110348_InitialDatabaseCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UsersMigrations\201512111558260_update.cs" />
+    <Compile Include="Migrations\UsersMigrations\201512111558260_update.Designer.cs">
+      <DependentUpon>201512111558260_update.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\UsersMigrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -297,6 +332,9 @@
     <EmbeddedResource Include="Migrations\DataMigrations\201512072109480_InitialDatabaseCreation.resx">
       <DependentUpon>201512072109480_InitialDatabaseCreation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\DataMigrations\201512111558082_update.resx">
+      <DependentUpon>201512111558082_update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\UsersMigrationsSample\201512080657029_InitialDatabaseCreation.resx">
       <DependentUpon>201512080657029_InitialDatabaseCreation.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\UsersMigrations\201512072110348_InitialDatabaseCreation.resx">
       <DependentUpon>201512072110348_InitialDatabaseCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UsersMigrations\201512111558260_update.resx">
+      <DependentUpon>201512111558260_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

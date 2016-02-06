@@ -13,7 +13,7 @@ namespace RestApi.Infrastructure
 
 
         public DBServiceContext()
-            : base("name=SampleConnection")
+            : base("name=MyConnectionString")
         {
             Configuration.ProxyCreationEnabled = false;
         }

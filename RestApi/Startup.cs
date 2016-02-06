@@ -16,6 +16,7 @@ using System.Configuration;
 using Microsoft.Owin.Security.DataHandler.Encoder;
 using Microsoft.Owin.Security.Jwt;
 using Microsoft.Owin.Security;
+using Microsoft.Owin.Cors;
 
 namespace RestApi
 {
@@ -25,6 +26,7 @@ namespace RestApi
 
         public void Configuration(IAppBuilder app)
         {
+
             HttpConfiguration httpConfig = new HttpConfiguration();
 
             ConfigureOAuthTokenGeneration(app);
@@ -48,7 +50,7 @@ namespace RestApi
                 //For Dev enviroment only (on production should be AllowInsecureHttp = false)
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/oauth/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(1),
                 Provider = new CustomOAuthProvider(),
                 AccessTokenFormat = new CustomJwtFormat("http://localhost:65447")
             };
@@ -59,9 +61,10 @@ namespace RestApi
 
         private void ConfigureWebApi(HttpConfiguration config)
         {
-            config.MapHttpAttributeRoutes();
 
-            config.EnableCors(new EnableCorsAttribute("*", "*", "GET, POST, OPTIONS, PUT, DELETE"));
+            config.EnableCors();
+
+            config.MapHttpAttributeRoutes();
 
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();

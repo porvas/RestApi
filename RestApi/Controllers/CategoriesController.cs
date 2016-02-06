@@ -25,7 +25,7 @@ namespace RestApi.Controllers
     }
 
 
-    [EnableCors(origins: "http://localhost:65447", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CategoriesController : ApiController
     {
         private DBServiceContext db = new DBServiceContext();

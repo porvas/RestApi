@@ -10,7 +10,7 @@ namespace RestApi.Infrastructure
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("SampleConnection", throwIfV1Schema: false)
+            : base("MyConnectionString", throwIfV1Schema: false)
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
